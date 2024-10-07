@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-image: url("https://img.freepik.com/premium-vector/tic-tac-toe-seamless-pattern-yellow-background-vector-illustration_723710-1062.jpg?w=740");
+    background-repeat: repeat;
+}
+#front-page{
+    background-color: #3304fb;
+    font-size: 3.125em;
+    text-align: center;
+    width: 50%;
+    margin:auto;
+    margin-top: 10%;
+    display: block;
+    color: #fb04d7;
+    text-shadow: -0.3125em 0.3125em 0.1875em black;
+}
+#front-page input[type="submit"]{
+    font-size:1.25em;
+    background-color: #fb04d7;
+    padding: 0.3125em;
+    margin-bottom: 0.625em;
+    box-shadow:  -0.3125em 0.3125em 0.1875em black;
+}
+#player1, #player2{
+    font-size: 0.875em;
+    padding: 0.25em;
+}
+#front-page p{
+    padding: 0.25em;
+}
+#game-page{
+    display: none;
+    text-align: center;
+    background-color: #1de23e;
+}
+#score{
+    display: flex;
+    font-size: 3.125em;
+    text-align: center;
+    justify-content: space-around;
+}
+#board{
+    height: 70vh;
+    width: 70%;
+    margin:auto;
+    margin-top: 3.125em;
+    background-color: white;
+}
+#board>div{
+    border-bottom:0.3125em solid #ab20fd;
+    height: 33%;
+    display: flex;
+}
+#board div div{
+    border-right: 0.1em solid #ab20fd;
+    width: 33%;
+    font-size: 3.75em;
+    height:100%;
+}
+#board>div:last-child{
+    border-bottom:none;
+}
+#board div div:last-child{
+    border-right:none;
+}
+#reset, #new{
+    font-size: 1.55em;
+    background-color: #ab20fd;
+    padding: 0.3125em;
+    margin: 2.125em;
+}
+#board div div:hover{
+    background-color:#ab20fd33;
+}
+#p1-name, #p2-name,#p1-score,#p2-score{
+    color:#ab20fd;
+}
+.neon{
+    max-height: 100%;
+    max-width: 100%;
+}
+@media only screen and (max-width: 767px){
+    #front-page{
+        width: 100%;
+        font-size: 2em;
+        margin-top: 50%;
+    }
+    #player1, #player2{
+        font-size: 0.7em;
+    }
+    #front-page input[type="submit"]{
+        font-size: 1em;
+    }
+    #board{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:1024px){
+    #front-page{
+        width: 100%;
+        font-size: 4em;
+        margin-top: 30%;
+    }
+}

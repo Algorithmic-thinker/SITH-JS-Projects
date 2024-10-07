@@ -1,0 +1,59 @@
+body{
+    background-color: lightgrey;
+    margin: auto;
+    width: 50%;
+}
+.heading{
+    text-align: center;
+}
+.balance{
+    font-size: 2em;
+    font-weight: bold;
+}
+td, th{
+    border: none;
+    margin: 0.5em;
+    padding: 1em;
+    text-align: center;
+}
+tr{
+    border: 0.125em solid black;
+}
+table{
+    background-color: white;
+    font-size: 1.25em;
+    width: 70%;
+    margin: left;
+}
+.income{
+    color: green;
+}
+.expense{
+    color: red;
+}
+#history{
+    border-bottom: 0.125em solid black;
+    width: 70%;
+    margin:left;
+}
+#submit{
+    background-color: cyan;
+    color: white;
+    width: 70%;
+    font-size: 2em;
+    display: block;
+    margin: left;
+    margin-top: 1.25em;
+}
+#text, #amount{
+    height: 1em;
+    width: 70%;
+    font-size: 1.25em;
+    padding: 0.625em;
+}
+@media only screen and (max-width: 768px){
+    body{
+        width: 100%;
+        margin-left: 2em;
+    }
+} 

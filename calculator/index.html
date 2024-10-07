@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="flex">
+        <div class="form">
+            <div class="column">
+                <input class="input1" value="" id="subVal" type="text" disabled>
+                <input class="input2"  value="0" id ="inputVal" type="text">
+            </div>
+            <div class="row">
+                <button class="border-button" id="clear" onclick="deletelast()">⌫ </button>
+                <button class="border-button" onclick="root()">✓</button>
+                <button class="border-button" onclick="getValue('**')">^</button>
+                <button class="border-button" onclick="myHistory()">↺</button>
+            </div>
+            <div class="row">
+                <button class="border-button" id="clear" onclick="clearAll()">C</button>
+                <button class="border-button">()</button>
+                <button class="border-button"onclick="percentage()">%</button>
+                <button class="border-button" onclick="getValue('/')">÷</button>
+            </div>
+            <div class="row">
+                <button class="border-button num" onclick="getValue('7')" >7</button>
+                <button class="border-button num" onclick="getValue('8')" >8</button>
+                <button class="border-button num" onclick="getValue('9')" >9</button>
+                <button class="border-button " onclick="getValue('*')">X</button>
+            </div>
+            <div class="row">
+                <button class="border-button num" onclick="getValue('4')">4</button>
+                <button class="border-button num" onclick="getValue('5')">5</button>
+                <button class="border-button num" onclick="getValue('6')">6</button>
+                <button class="border-button" onclick="getValue('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="border-button num" onclick="getValue('1')">1</button>
+                <button class="border-button num" onclick="getValue('2')">2</button>
+                <button class="border-button num" onclick="getValue('3')">3</button>
+                <button class="border-button"onclick="getValue('+')" >+</button>
+            </div>
+            <div class="row">
+                <button class="border-button">+/-</button>
+                <button class="border-button num" onclick="getValue('0')">0</button>
+                <button class="border-button" onclick="getValue('.')">.</button>
+                <button class="border-button" id="equal" onclick="solve()">=</button>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <h1>HISTORY</h1>
+                <hr>
+            </div>
+            <div id="history">
+                <div id="his">
+
+                </div>
+            </div>
+            <div><button onclick="clearHistory()">clear all</button></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

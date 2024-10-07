@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TIC-TAC-TOE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div id="front-page">
+        <p>Player 1: <input type="text" value="" id="player1"></p>
+        <p>Player 2: <input type="text" value="" id="player2"></p>
+        <input type="submit" onclick="start()" value="start">
+    </div>
+    <div id="game-page">
+        <div id="score">
+            <div>
+                <span id="p1-name">Player1:</span>
+                <span id="p1-score">0</span>
+            </div>
+            <div>
+                <span id="p2-name">Player2:</span>
+                <span id="p2-score">0</span>
+            </div>
+        </div>
+        <div id="board">
+
+        </div>
+        <button id="reset" onclick="reload()">↺</button>
+        <button id="new" onclick="restart()">New Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
