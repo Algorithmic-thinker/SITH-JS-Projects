@@ -1,0 +1,15 @@
+body{
+    background: linear-gradient(to right, #0575E6, #00F260);
+}
+h1,table{
+    text-align: center;
+    margin: auto;
+}
+table,td,th{
+    border: 2px solid blue;
+    border-collapse:collapse;
+    padding: 5px;
+}
+table{
+    width: 50%;
+}

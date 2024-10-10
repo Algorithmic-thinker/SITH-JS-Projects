@@ -57,3 +57,8 @@ table{
         margin-left: 2em;
     }
 } 
+.hamburger{
+    position:absolute;
+    left:0px;
+    top:0px;
+}
