@@ -100,15 +100,13 @@ function myHistory()
 
 function showHistory(y, ans)
 {
-    c.innerHTML += `<p>${y}</p>
-                    <hr>
-                    <p>${ans}</p>
-                    <hr>`;
+    c.innerHTML += `<p style="border-bottom: 2px solid grey;">${y}</p>
+                    <p style="border-bottom: 2px solid black;">${ans}</p>`;
     var history = c.innerHTML;
     if(c.length != 0)
     {
         b.innerHTML=`<p></p>
-                    <div>
+                    <div id="his">
                         ${history}
                     </div>`
     }
@@ -120,9 +118,10 @@ function clearHistory()
     {
         b.innerHTML=`<p>There is no history yet..</p>
                 <div id="his" style="border-top: 2px solid black;
-                border-bottom: 2px solid black;">
+                ">
                     
                 </div>`;
+        c = document.querySelectorAll('#history #his')[0];
         c.innertHTML = "";
     }
 }
