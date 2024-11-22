@@ -64,9 +64,13 @@ function filterShoppingList(e){
         (key) => localStorage.getItem(key).toLowerCase().search(userInput.toLowerCase()) == 0
     );
     show(itemKey);
-    document.querySelectorAll('.fa-xmark').forEach(
-        (item) => item.addEventListener('click', removeElement)
-    );
+    if(userInput == "")
+    {
+        document.querySelectorAll('.fa-xmark').forEach(
+            (item) => item.addEventListener('click', removeElement)
+        );
+    }
+    
 }
 
 //clear all
@@ -74,6 +78,9 @@ function filterShoppingList(e){
 document.getElementById("clear").addEventListener("click", clearAll);
 
 function clearAll(){
-    localStorage.clear();
-    show();
+    if( confirm("Are you sure?"))
+    {
+        localStorage.clear();
+        show(); 
+    } 
 }
