@@ -1,5 +1,4 @@
 let game_board = document.getElementById('board');
-let inner_html="";
 let game_page = document.getElementById('game-page');
 let front_page = document.getElementById('front-page');
 let player_1 = document.getElementById('player1');
@@ -10,20 +9,6 @@ let p1_score = document.getElementById('p1-score');
 let p2_score = document.getElementById('p2-score');
 let count=1;
 let cell_array = [1,0,1,0,1,0,1,0,0];
-let x = '<img src="x.png" class="neon"/>';
-let o = '<img src="o.png" class="neon"/>'; 
-for(let i = 1; i<=3; i++)
-{   
-    inner_html += '<div id='+'\"row'+i+'\">';
-    for(let j = 1; j<=3; j++)
-    {   
-        a = `\"cell${i}${j}\"`;
-        b =`${i},${j}`;
-        inner_html += '<div id='+a+'></div>';
-    }
-    inner_html += `</div>`;
-}
-game_board.innerHTML = inner_html;
 
 function start()
 {   
@@ -43,16 +28,16 @@ document.querySelector("#board").addEventListener('click', (event)=>{
 function xo(a)
 {   let cell = document.getElementById(a);
     let symbol;
-    if(cell.innerHTML != x && cell.innerHTML != o)
+    if(cell.innerHTML != "X" && cell.innerHTML != "O")
     {
         if(count%2==0 && count!=0)
         {
-            symbol = o;
+            symbol = "O";
             count++;
         }
         else if(count!=0)
         {
-            symbol= x;
+            symbol= "X";
             count++;
         }    
         else
@@ -66,7 +51,7 @@ function xo(a)
             if (result == "win")
             {   
                 count = 0;
-                if(symbol == x)
+                if(symbol == "X")
                     p1_score.innerText = parseInt(p1_score.innerText)+1;
                 else
                     p2_score.innerText = parseInt(p2_score.innerText)+1;
@@ -145,7 +130,7 @@ function reload()
         for(let j = 1; j<=3; j++)
         {
             document.getElementById("cell"+i+j).innerHTML='';
-            document.getElementById("cell"+i+j).style.backgroundColor='white';
+            document.getElementById("cell"+i+j).style.backgroundColor='transparent';
         }
     }
     count = 1;

@@ -1,3 +1,7 @@
+@font-face {
+    font-family: brushking;
+    src: url("BrushKing.otf");
+}
 *{
     box-sizing: border-box;
     padding: 0px;
@@ -35,7 +39,10 @@ body{
 #game-page{
     display: none;
     text-align: center;
-    background-color: #1de23e;
+    background-image: url("game-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
 }
 #score{
     display: flex;
@@ -45,39 +52,46 @@ body{
 }
 #board{
     height: 70vh;
-    width: 70%;
+    width: 40vw;
     margin:auto;
-    margin-top: 3.125em;
-    background-color: white;
+    font-family: brushking;
+    color: yellow;
+    margin-top: 1em;
+    background-color: transparent;
+    border:0.3125em solid black;
+    border-right: none;
+    border-bottom: none;
 }
 #board>div{
-    border-bottom:0.3125em solid #ab20fd;
-    height: 33%;
+    border-bottom:0.3125em solid black;
+    height: 33.35%;
     display: flex;
+    justify-content: space-between;
 }
 #board div div{
-    border-right: 0.1em solid #ab20fd;
-    width: 33%;
+    border-right: 0.1em solid black;
+    width: 33.35%;
     font-size: 3.75em;
     height:100%;
 }
-#board>div:last-child{
-    border-bottom:none;
-}
-#board div div:last-child{
-    border-right:none;
-}
 #reset, #new{
     font-size: 1.55em;
-    background-color: #ab20fd;
+    background-color: #89f336;
+    color: white;
     padding: 0.3125em;
-    margin: 2.125em;
+    margin: 1em 2.125em;
 }
-#board div div:hover{
-    background-color:#ab20fd33;
-}
+/* #board div div:hover{
+    background-color:#ab20fd33; 
+} */
 #p1-name, #p2-name,#p1-score,#p2-score{
-    color:#ab20fd;
+    color:#89f336;
+}
+#score div{
+    margin-top: 0.3em;
+    background-color: red;
+    padding: 0.3em;
+    border-radius: 0.5em;
 }
 .neon{
     max-height: 100%;
@@ -96,12 +110,12 @@ body{
         font-size: 1em;
     }
     #board{
-        width: 100%;
+        width: 90%;
     }
 }
 @media only screen and (min-width: 768px) and (max-width:1024px){
     #front-page{
-        width: 100%;
+        width: 90%;
         font-size: 4em;
         margin-top: 30%;
     }

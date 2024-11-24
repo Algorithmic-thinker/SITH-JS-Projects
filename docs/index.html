@@ -25,7 +25,7 @@
             </div>
             <div class="row">
                 <button class="border-button" id="clear" onclick="clearAll()">C</button>
-                <button class="border-button">()</button>
+                <button class="border-button" onclick="getValue('(')">(</button>
                 <button class="border-button"onclick="percentage()">%</button>
                 <button class="border-button" onclick="getValue('/')">÷</button>
             </div>
@@ -48,7 +48,7 @@
                 <button class="border-button"onclick="getValue('+')" >+</button>
             </div>
             <div class="row">
-                <button class="border-button">+/-</button>
+                <button class="border-button" onclick="getValue(')')">)</button>
                 <button class="border-button num" onclick="getValue('0')">0</button>
                 <button class="border-button" onclick="getValue('.')">.</button>
                 <button class="border-button" id="equal" onclick="solve()">=</button>

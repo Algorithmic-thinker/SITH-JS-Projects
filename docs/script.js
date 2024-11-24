@@ -92,10 +92,12 @@ function deletelast(){
 }
 
 function myHistory()
-{   if(document.getElementsByClassName('right')[0].style.display=="none")
-        var a = document.getElementsByClassName('right')[0].style.display="block";
-    else
-        var a = document.getElementsByClassName('right')[0].style.display="none";
+{   
+    const element = document.getElementsByClassName('right')[0];
+    if (element) {
+        const currentVisibility = getComputedStyle(element).visibility;
+        element.style.visibility = currentVisibility === "hidden" ? "visible" : "hidden";
+    }
 }
 
 function showHistory(y, ans)
@@ -131,7 +133,7 @@ function root()
    sub_val.value = x;
    ans = x ** 0.5;
    input_val.value = ans;
-   showHistory(sub_val.value,ans);
+   showHistory(sub_val.value + "=",ans);
 }
 function percentage(){
     let x = input_val.value;

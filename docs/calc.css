@@ -52,15 +52,19 @@
     /* background-color: orange; */
     font-size: 2em; 
     height: 23em;
-    display: none;
+    visibility: hidden;
     background: #B993D6;  
     background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  
     background: linear-gradient(to right, #8CA6DB, #B993D6); 
-
+}
+.right button{
+    font-size: 1em;
 }
 #history{
     height: 83%;
     overflow: auto;
+    text-align: right;
+    padding-right: 0.2em;
 }
 @media only screen and (max-width: 767px) {
 

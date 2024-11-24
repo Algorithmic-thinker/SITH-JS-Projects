@@ -2,6 +2,7 @@ body{
     background-color: lightgrey;
     margin: auto;
     width: 50%;
+    font-size: 0.84em;
 }
 .heading{
     text-align: center;
@@ -21,9 +22,15 @@ tr{
 }
 table{
     background-color: white;
-    font-size: 1.25em;
+    font-size: 1em;
     width: 70%;
     margin: left;
+}
+th, td{
+    font-size: 2em;
+}
+td{
+    padding-top: 0px;
 }
 .income{
     color: green;
@@ -59,6 +66,6 @@ table{
 } 
 .hamburger{
     position:absolute;
-    left:0px;
+    left:10px;
     top:0px;
 }
