@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#main{
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+    box-shadow: 0px 0px 1rem gray;
+}
+
+#photo{
+    background-image: linear-gradient(to bottom, lightgray 50%, black 50.5%, white 51%);
+    padding: 3rem;
+}
+
+#photo img{
+    border-radius: 50%;
+    width: 10rem;
+    height: auto;
+    display: block;
+    margin:auto;
+    border: 0.2rem solid white;
+    outline: 0.1rem solid black;
+}
+
+#onlyOne{
+    text-align: center;
+}
+
+#onlyOne div{
+    display: none;
+}
+
+#onlyOne div p{
+    color: lightgray;
+    font-size: 2rem;
+}
+
+#icons i{
+    font-size: 3rem;
+    margin: 2rem 1.5rem;
+}
+
+#icons{
+    text-align: center;
+}
+
