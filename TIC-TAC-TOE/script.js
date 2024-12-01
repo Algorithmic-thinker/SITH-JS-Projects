@@ -14,19 +14,18 @@ function start()
 {   
     if(player_1.value != "")
     {
-       p1_name.innerText = player_1.value +":";
-       p2_name.innerText = player_2.value +":";
+       p1_name.innerText = player_1.value ;
+       p2_name.innerText = player_2.value ;
     }
     front_page.style.display = "none";
     game_page.style.display = "block";
-    document.body.style.backgroundImage= "none";
 }
 
-document.querySelector("#board").addEventListener('click', (event)=>{
-    xo(event.target.id);
-});
-function xo(a)
-{   let cell = document.getElementById(a);
+document.querySelectorAll("#board div div").forEach( div => div.addEventListener('click', xo));
+function xo(e)
+{   
+    a = e.target.id;
+    let cell = document.getElementById(a);
     let symbol;
     if(cell.innerHTML != "X" && cell.innerHTML != "O")
     {
@@ -34,6 +33,7 @@ function xo(a)
         {
             symbol = "O";
             count++;
+
         }
         else if(count!=0)
         {
@@ -51,10 +51,19 @@ function xo(a)
             if (result == "win")
             {   
                 count = 0;
-                if(symbol == "X")
+                if(symbol == "X"){
                     p1_score.innerText = parseInt(p1_score.innerText)+1;
-                else
+                    setTimeout(()=>{
+                        alert("X WINS !!");
+                    }, 500);
+                }
+                else{
                     p2_score.innerText = parseInt(p2_score.innerText)+1;
+                    setTimeout(()=>{
+                        alert("O WINS !!");
+                    }, 500);
+                }
+                    
             }
             else if(result=="draw")
             {   
@@ -139,4 +148,21 @@ function reload()
 function restart()
 {
     window.location.reload();
+}
+
+document.querySelectorAll("#board div div").forEach( div => div.addEventListener("click", changeColor) );
+
+function changeColor(e){
+    div = document.getElementById(e.target.id);
+    setTimeout( function(){
+        if (div.innerHTML == "X"){
+            div.style.color = "#fe7792";
+            div.style.textShadow = "1px 1px 20px #ff073a, 1px 1px 20px #ff073a";
+        }
+        else{
+            div.style.color = "#7777f9";
+            div.style.textShadow = "1px 1px 20px #4D4DFF, 1px 1px 20px #4D4DFF";
+        }
+    },10);
+    
 }

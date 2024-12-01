@@ -1,6 +1,10 @@
 @font-face {
-    font-family: brushking;
-    src: url("BrushKing.otf");
+    font-family: neon;
+    src: url("neon.ttf");
+}
+@font-face {
+    font-family: xo;
+    src: url("xofont.otf");
 }
 *{
     box-sizing: border-box;
@@ -8,11 +12,14 @@
     margin: 0px;
 }
 body{
-    background-image: url("https://img.freepik.com/premium-vector/tic-tac-toe-seamless-pattern-yellow-background-vector-illustration_723710-1062.jpg?w=740");
+    background-image: url("background-image.png");
     background-repeat: repeat;
 }
 #front-page{
-    background-color: #3304fb;
+    background-color: #4deeea33;
+    border: 0.3rem solid #4deeea;
+    box-shadow: 0px 0px 2rem #4deeea;
+    font-family: neon;
     font-size: 3.125em;
     text-align: center;
     width: 50%;
@@ -20,14 +27,19 @@ body{
     margin-top: 10%;
     display: block;
     color: #fb04d7;
-    text-shadow: -0.3125em 0.3125em 0.1875em black;
+}
+#front-page input[type="text"]{
+    color: royalblue;
+    border-radius: 2rem;
+    background-color: rgb(252, 228, 207);
 }
 #front-page input[type="submit"]{
-    font-size:1.25em;
+    font-size:0.7em;
+    border-radius: 0.2em;
     background-color: #fb04d7;
+    box-shadow: 0px 0px 2rem #fb04d7;
     padding: 0.3125em;
     margin-bottom: 0.625em;
-    box-shadow:  -0.3125em 0.3125em 0.1875em black;
 }
 #player1, #player2{
     font-size: 0.875em;
@@ -39,59 +51,100 @@ body{
 #game-page{
     display: none;
     text-align: center;
-    background-image: url("game-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     user-select: none;
+    height: 100vh;
+    overflow: hidden;
 }
-#score{
-    display: flex;
-    font-size: 3.125em;
-    text-align: center;
-    justify-content: space-around;
-}
+
 #board{
     height: 70vh;
     width: 40vw;
     margin:auto;
-    font-family: brushking;
-    color: yellow;
-    margin-top: 1em;
+    font-family: xo;
+    font-size: 2rem;
+    margin-top: 0em;
     background-color: transparent;
-    border:0.3125em solid black;
-    border-right: none;
-    border-bottom: none;
+    position: relative;
+    top: -8rem;
 }
 #board>div{
-    border-bottom:0.3125em solid black;
     height: 33.35%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 #board div div{
-    border-right: 0.1em solid black;
+    background-color: #4deeea33;
+    border: 0.1rem solid #4deeea;
+    box-shadow: 0px 0px 0.5rem #4deeea;
     width: 33.35%;
     font-size: 3.75em;
     height:100%;
+    margin: 0.25rem;
 }
-#reset, #new{
+ #new{
     font-size: 1.55em;
-    background-color: #89f336;
-    color: white;
+    background-color: #ff073a33;
+    border: 0.1rem solid #ff073a;
+    box-shadow: 0px 0px 0.5rem #ff073a;
+    color: #fe7792;
     padding: 0.3125em;
-    margin: 1em 2.125em;
+    margin: 0em 2.125em;
+    position: relative;
+    bottom: 5rem;
+}
+#reset{
+    font-size: 1.55em;
+    background-color: #ff550733;
+    border: 0.1rem solid #ff5507;
+    box-shadow: 0px 0px 0.5rem #ff5507;
+    color: #fea277;
+    padding: 0.3125em;
+    margin: 0em 2.125em;
+    position: relative;
+    bottom: 5rem;
 }
 /* #board div div:hover{
     background-color:#ab20fd33; 
 } */
-#p1-name, #p2-name,#p1-score,#p2-score{
-    color:#89f336;
+#score{
+    display: flex;
+    font-size: 2em;
+    text-align: center;
+    justify-content: space-between;
+    margin: 0px 8rem;
 }
-#score div{
+#p1-name, #p2-name,#p1-score,#p2-score{
+    color: white;
+}
+#score>div{
     margin-top: 0.3em;
-    background-color: red;
-    padding: 0.3em;
+    padding: 1em;
     border-radius: 0.5em;
+}
+#score>div:nth-child(1){
+    background-color: #ff073a33;
+    border: 0.1rem solid #ff073a;
+    box-shadow: 0px 0px 0.5rem #ff073a;
+}
+#score>div:nth-child(2){
+    background-color: #4deeea33;
+    border: 0.1rem solid #4deeea;
+    box-shadow: 0px 0px 0.5rem #4deeea;
+}
+#score>div div:nth-child(2){
+    font-size: 2em;
+    font-family: xo;
+}
+#score>div:nth-child(1) div:nth-child(2){
+    color: #fe7792;
+    text-shadow: 1px 1px 20px #ff073a, 1px 1px 20px #ff073a;
+}
+#score>div:nth-child(2) div:nth-child(2){
+    color: #7777f9;
+    text-shadow: 1px 1px 20px #4D4DFF, 1px 1px 20px #4D4DFF;
 }
 .neon{
     max-height: 100%;
@@ -111,6 +164,18 @@ body{
     }
     #board{
         width: 90%;
+        height: 50%;
+        top: 1.5rem;
+    }
+    #score{
+        margin: 1rem 1rem;
+    }
+    #score>div{
+        padding: 0.5rem;
+    }
+    #new, #reset{
+        bottom: -5rem;
+        margin: 0px 1rem;
     }
 }
 @media only screen and (min-width: 768px) and (max-width:1024px){
