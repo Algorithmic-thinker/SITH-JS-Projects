@@ -1,4 +1,4 @@
-function uploadProject()
+function getUserData()
 {
     fetch("https://randomuser.me/api/").then((data)=>{
         let res = data.json();
@@ -33,7 +33,7 @@ function uploadProject()
         console.log("ERR in API",err);
     });
 }
-uploadProject();
+getUserData();
 
 document.querySelectorAll("#icons i").forEach( icon => icon.addEventListener("mouseover", showContent));
 let previousId = "nameDiv";
