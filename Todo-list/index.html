@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo-list</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/151efbd277.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Todo-list</h1>
+    <div id="main">
+
+        <div>
+
+            <form>
+                <div>
+                    <label>Task</label>
+                    <input type="text" value="">
+                </div>
+
+                <div>
+                    <label>Description</label>
+                    <textarea></textarea>
+                </div>
+                
+                <input type="submit" value="Create task">
+            </form>
+
+            <div class="switch-list">
+                <button class="task-button all"> 
+                    <p> All </p>
+                    <!-- <p> <span id="all-tasks">0</span> tasks </p> -->
+                </button>
+                <button class="task-button on-going"> 
+                    <p> On going </p>
+                    <!-- <p> <span id="on-going-tasks">0</span> tasks </p> -->
+                </button>
+                <button class="task-button pending">
+                    <p> Pending </p>
+                    <!-- <p> <span id="pending-tasks">0</span> tasks </p> -->
+                </button>
+                <button class="task-button completed"> 
+                    <p> Completed </p>
+                    <!-- <p> <span id="completed-tasks">0</span> tasks </p> -->
+                </button>
+            </div>
+
+        </div>
+
+        <div>
+            <ol id="task-list">
+                <h2> <span id="list-name"></span>Tasks</h2>
+            </ol>
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

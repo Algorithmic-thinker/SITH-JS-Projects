@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    padding:0rem;
+    margin:0rem;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+
+}
+
+#main{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    margin: 0rem 2rem;
+    height: 90vh;
+}
+
+h1{
+    text-align: center;
+    margin: 3rem;
+    color: white;
+}
+
+form{
+    background-color: orange;
+    width: 100%;
+    margin:auto;
+    padding: 2rem 2rem;
+}
+
+form div{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+
+form div:nth-child(1) label{
+    margin-right: 2.5rem;
+}
+
+label{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+
+input[type="text"]{
+    width: 50%;
+    height: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 2.5rem;
+}
+
+textarea{
+    width: 50%;
+    height: 10rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+input[type="submit"]{
+    width: 40%;
+    height: 2rem;
+    margin-left: 11rem;
+    font-size: 1.5rem;
+    background-color:rgb(246, 13, 59);
+}
+
+.switch-list{
+    margin-left: 1rem;
+}
+
+.task-button{
+    width: 10rem;
+    height: 5rem;
+    margin: 3rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.all{
+    background-color: cornflowerblue;
+}
+
+.on-going{
+    background-color:aquamarine;
+}
+
+.pending{
+    background-color: crimson;
+}
+
+.completed{
+    background-color: forestgreen;
+}
+
+.task-button p:first-child{
+    margin-bottom: 0.3rem;
+    font-size: 1.5rem;
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+ol{
+    height: 80vh;
+    width: 90%;
+    overflow: auto;
+    list-style-position: inside;
+    padding: 1rem;
+    border: 0.1rem solid white;
+    overflow: auto;
+}
+
+ol li{
+    width: 50%;
+    font-size: 2rem;
+    margin: 2rem auto 0;
+    height: 8rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow: auto;
+}
+
+ol li span:nth-child(1){
+    text-decoration: underline;
+}
+
+ol li span:nth-child(2){
+    display: block;
+    font-size: 1rem; 
+    margin: 0 2rem;
+}
+
+ol div div i{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    display: block;
+}
+
+ol div div{
+    float: right;
+    position: relative;
+    right: 3rem;
+    bottom: 7rem;
+}
+
+ol li::-webkit-scrollbar{
+    display: none;
+}
+
+.delete{
+    color: red;
+}
+
+.start{
+    color: orange;
+}
+
+.complete{
+    color: greenyellow;
+}
