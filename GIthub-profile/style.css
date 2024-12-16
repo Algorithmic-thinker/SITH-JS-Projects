@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    padding: 0rem;
+    margin: 0rem;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+.front-page{
+    width: 48rem;
+    height: min-content;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 20% auto;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input{
+    width: 84%;
+    font-size: 1.25rem;
+    color: black;
+    background-color: #e6f5fb;
+    padding: 0.8rem 1rem;
+    border-radius: 0.9rem;
+}
+
+.search-box input::placeholder{
+    color: black;
+}
+
+.search-box button{
+    width: 3rem;
+    height: 3rem;
+    background-color: #e6f5fb;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.profile-page{
+    height: 100vh;
+    width: 40%;
+    padding: 2% 10%;
+    background-color: white;
+    display: none;
+}
+
+.profile-page img{
+    border-radius: 50%;
+    width: 70%;
+    aspect-ratio: 1;
+}
+
+.profile-page .name{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.profile-page .login{
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.profile-page button{
+    font-size: 1rem;
+    width: 16rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.profile-page .bio{
+    margin-top: 1rem;
+}
+
+.profile-page div:nth-child(6), .profile-page div:nth-child(7), .profile-page div:nth-child(8){
+    margin-top: 1rem;
+}
+div div:has(.repository){
+    background-color: white;
+    width: 60%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+}
+
+div div:has(.repository) h1{
+    margin-top: 1rem;
+}
+.repository{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 75vh;
+    overflow: hidden;
+} 
+
+.repo-body{
+    border: 0.1rem solid lightgray;
+    padding: 1rem;
+    width: 40%;
+    height: 8rem;
+    margin: 2rem;
+    border-radius: 2rem;
+}
+
+.repo-body a{
+    font-size: 1rem;
+}
+
+.repo-body p{
+    margin-top: 0.5rem;
+    height: 3rem;
+    font-size: 1rem;
+    overflow: auto;
+} 
+
+.repo-body p::-webkit-scrollbar{
+    display: none;
+}
