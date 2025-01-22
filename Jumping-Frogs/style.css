@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+#game{
+    width: 100%;
+    height: min-content;
+    display: flex;
+}
+
+.frog{
+    border: 0.1rem solid black;
+    padding: 1rem;
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+#level-selector{
+    margin-top: 2rem;
+}
+
+#reset{
+    margin-top: 1rem;
+}
